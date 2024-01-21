@@ -1,38 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: rgb(12, 58, 86);
+    color: rgb(212, 191, 191);
+    box-shadow: 4px 4px 5px 1px rgb(44, 40, 40);
+    transition: .3s;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.mistakes {
+    color: red;
+}
+
 .App {
-  text-align: center;
+    background: rgb(86, 195, 203);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sudoku {
+    border-collapse: collapse;
+    border: 2px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sudoku tr:nth-of-type(even) {
+    border-bottom: 2px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.sudoku td:nth-of-type(3) {
+    border-right: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell {
+    border: 1px solid gray;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.cell-active {
+    background: rgb(34, 109, 114);
 }
